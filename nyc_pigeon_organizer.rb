@@ -27,5 +27,14 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
+  data[:lives].each do |place, pigeon|
+    pigeon.each do |pigeon_name|
+      pigeon_keys.each do |key|
+        if pigeon_name === key
+          pigeons[key][:lives].push(place.to_s)
+        end
+      end
+    end
+  end
   pigeons
 end
