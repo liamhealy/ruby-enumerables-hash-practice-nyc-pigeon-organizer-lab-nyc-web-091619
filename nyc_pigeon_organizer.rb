@@ -20,7 +20,7 @@ def nyc_pigeon_organizer(data)
   end
   data[:gender].each do |gender, pigeon|
     pigeon.each do |pigeon_name|
-      pigeon_keys.each do |key|
+      pigeons.keys.each do |key|
         if pigeon_name === key
           pigeons[key][:gender].push(gender.to_s)
         end
