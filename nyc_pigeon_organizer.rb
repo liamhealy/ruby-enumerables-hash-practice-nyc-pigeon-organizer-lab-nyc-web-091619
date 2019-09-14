@@ -10,7 +10,7 @@ def nyc_pigeon_organizer(data)
   end
   data[:color].each do |color, pigeon|
     pigeon.each do |pigeon_name|
-      pigeons.each_key do
+      pigeons.each_key do |key|
         if pigeons[key] === color
           pigeons[:color].push(color)
         end
