@@ -12,7 +12,7 @@ def nyc_pigeon_organizer(data)
     pigeon.each do |pigeon_name|
       pigeons.each_key do |key|
         if color.include?(key)
-          pigeons[key][:color].push(color)
+          pigeons[key][:color].push(color.to_s)
         end
       end
     end
