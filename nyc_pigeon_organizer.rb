@@ -8,14 +8,15 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
-  pigeons.each_key do |key|
-    data[:color].each do |color, pigeon|
-      pigeon.each do |pigeon_name|
+  data[:color].each do |color, pigeon|
+    pigeon.each do |pigeon_name|
+      pigeons.each_key do
         if pigeons[key] === color
           pigeons[:color].push(color)
         end
       end
     end
+  end
   end
   pigeons
 end
